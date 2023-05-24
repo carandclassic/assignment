@@ -2,6 +2,8 @@
 
 ## Get started
 
+Please run the following commands to set up your environment:
+
 ```shell
 cp .env.example .env
 composer install
