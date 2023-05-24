@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-1 gap-3">
-        <Car v-for="x in this.cars"></Car>
+        <Car v-for="car of this.cars"/>
     </div>
 </template>
 
