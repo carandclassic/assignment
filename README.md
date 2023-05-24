@@ -2,8 +2,12 @@
 
 ## Get started
 
-1. `cp .env.example .env`
-2. `composer install`
-3. `php artisan serve`
-4. `yarn install`
-5. `yarn dev`
+```shell
+cp .env.example .env
+composer install
+yarn install
+php artisan migrate --force
+php artisan db:seed
+php artisan serve
+yarn dev
+```
