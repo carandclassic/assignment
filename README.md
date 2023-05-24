@@ -9,6 +9,7 @@
 - Laravel 10
 - PHPUnit 10
 - Vue.js 3
+- TailwindCSS 3
 - Vite.js
 - Vitest
 - SQLite DB
