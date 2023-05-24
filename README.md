@@ -2,7 +2,8 @@
 
 ## Get started
 
-1. `composer install`
-2. `php artisan serve`
-3. `yarn install`
-4. `yarn dev`
+1. `cp .env.example .env`
+2. `composer install`
+3. `php artisan serve`
+4. `yarn install`
+5. `yarn dev`

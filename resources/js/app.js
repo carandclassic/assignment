@@ -4,4 +4,5 @@ import Home from './Home.vue';
 const app = createApp({});
 
 app.component('home-component', Home);
+
 app.mount("#app");
