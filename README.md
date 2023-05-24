@@ -2,14 +2,9 @@
 
 > Skeleton repo for Car & Classic code assignment. You will be given the actual assignment during the live-coding pair-programming session. 
 
-## Prerequisites
+## Overview
 
-- PHP 8.1 or newer
-- Composer
-- Node.js 18
-- Yarn
-
-## Package contains
+### Package contains
 
 - Laravel 10
 - PHPUnit 10
@@ -18,7 +13,7 @@
 - Vitest
 - SQLite DB
 
-## Get familiar with code
+### Get familiar with code
 
 - Routes: `routes/`
   - API endpoint in `api.php`
@@ -29,9 +24,18 @@
   - Home page: `Pages/Home.vue`
   - Components: `Components/`
 - Front-end test using `vitest` and `@vue/test-utils`: `resources/js/Components/Car.spec.js`
-- Tests (PHPUnit) `tests/`
+- Back-end tests using `phpunit`: `tests/`
 
-## Install
+## Set up environment
+
+### Prerequisites
+
+- PHP 8.1 or newer
+- Composer
+- Node.js 18
+- Yarn
+
+### Install dependencies and migrate database
 
 Run the following commands to set up your environment:
 
@@ -43,12 +47,12 @@ php artisan migrate --force
 php artisan db:seed
 ```
 
-## Run servers
+### Start the project
 
 - `php artisan serve`
 - `yarn dev`
 
-## Run tests
+### Run tests
 
 - Back-end tests: `php artisan test`
 - Front-end tests: `yarn test`
