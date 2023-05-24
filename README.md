@@ -2,7 +2,7 @@
 
 > Skeleton repo for Car & Classic code assignment. You will be given the actual assignment during the live-coding pair-programming session. 
 
-## Prerequesites 
+## Prerequisites 
 
 - npm
 - PHP >= 8.1
