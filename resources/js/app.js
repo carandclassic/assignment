@@ -1,7 +1,9 @@
-import {createApp} from 'vue/dist/vue.esm-bundler.js';
-import Home from './Home.vue';
+import {createApp} from "vue";
+
+import Home from './Pages/Home.vue';
 
 const app = createApp({});
 
-app.component('home-component', Home);
+app.component('home-page', Home);
+
 app.mount("#app");
