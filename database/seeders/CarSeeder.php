@@ -20,6 +20,6 @@ class CarSeeder extends Seeder
         Car::query()->forceCreateQuietly(['make' => 'Mercedes', 'model' => '280 SE Coupe 3.5', 'year' => 1970, 'price' => 66_050_00, 'country' => 'France', 'latitude' => '48.858093', 'longitude' => '2.294694', 'image_path' => '/images/mercedes-280-se-coupe-3-5.jpeg']);
         Car::query()->forceCreateQuietly(['make' => 'Lamborghini', 'model' => 'Espada', 'year' => 1971, 'price' => 89_140_00, 'country' => 'Italy', 'latitude' => '41.890209', 'longitude' => '12.492231', 'image_path' => '/images/lamborghini-espada.jpeg']);
         Car::query()->forceCreateQuietly(['make' => 'Fiat', 'model' => '500', 'year' => 1971, 'price' => 17_00_00, 'country' => 'Italy', 'latitude' => '43.722954', 'longitude' => '10.396594', 'image_path' => '/images/fiat-500.jpeg']);
-        Car::query()->forceCreateQuietly(['make' => 'ASA', 'model' => '1000 GT Spider', 'year' => 1965, 'price' => 150_00_00, 'country' => 'Italy', 'latitude' => '45.4353', 'longitude' => '12.3265', 'image_path' => '/images/fiat-500.jpeg']);
+        Car::query()->forceCreateQuietly(['make' => 'ASA', 'model' => '1000 GT Spider', 'year' => 1965, 'price' => 150_00_00, 'country' => 'Italy', 'latitude' => '45.4353', 'longitude' => '12.3265', 'image_path' => '/images/asa-1000-gt-spider.jpeg']);
     }
 }
