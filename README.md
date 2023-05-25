@@ -57,5 +57,7 @@ yarn dev
 
 ### Run tests
 
-- Back-end tests: `php artisan test`
-- Front-end tests: `yarn test`
+```Tests
+php artisan test
+yarn test
+```
