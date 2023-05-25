@@ -16,9 +16,12 @@ return new class extends Migration
 
             $table->string('make');
             $table->string('model');
-            $table->string('year');
             $table->unsignedInteger('price');
-
+            $table->string('year');
+            $table->string('country');
+            $table->decimal('latitude', 10, 8);
+            $table->decimal('longitude', 11, 8);
+            $table->string('image_path');
             $table->timestamps();
         });
     }
