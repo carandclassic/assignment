@@ -50,8 +50,10 @@ php artisan db:seed
 
 ### Start the project
 
-- `php artisan serve`
-- `yarn dev`
+```shell
+php artisan serve
+yarn dev
+```
 
 ### Run tests
 
