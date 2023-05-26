@@ -12,7 +12,8 @@ class CarController extends Controller
 {
     public function index(Request $request)
     {
-        $limit = $request->get('limit', 10);
+        $limit = $request->integer('limit', 10);
+
         return Car::paginate($limit);
     }
 }
