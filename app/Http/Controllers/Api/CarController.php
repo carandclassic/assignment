@@ -6,11 +6,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Car;
+use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return Car::all();
+        $limit = $request->get('limit', 10);
+        return Car::paginate($limit);
     }
 }
