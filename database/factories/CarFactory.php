@@ -25,7 +25,7 @@ class CarFactory extends Factory
             'country' => $this->faker->country(),
             'latitude' => $this->faker->latitude(),
             'longitude' => $this->faker->longitude(),
-            'image_path' => '/images/' . $this->faker->randomElement(
+            'image_path' => '/images/'.$this->faker->randomElement(
                 File::files(public_path('images'))
             )->getFilename(),
         ];
