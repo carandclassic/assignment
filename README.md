@@ -50,14 +50,10 @@ php artisan db:seed
 
 ### Start the project
 
-```shell
-php artisan serve
-yarn dev
-```
+- Back-end: `php artisan serve`
+- Front-end: `yarn dev`
 
 ### Run tests
 
-```Tests
-php artisan test
-yarn test
-```
+- Back-end: `php artisan test`
+- Front-end: `yarn test`
