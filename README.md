@@ -42,10 +42,17 @@ Run the following commands to set up your environment:
 
 ```shell
 cp .env.example .env
-composer install
-yarn install
-php artisan migrate --force
-php artisan db:seed
+
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+
+vendor/bin/sail yarn install
+vendor/bin/sail artisan migrate --force
+vendor/bin/sail artisan db:seed
 ```
 
 ### Start the project
