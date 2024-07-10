@@ -57,10 +57,10 @@ vendor/bin/sail artisan db:seed
 
 ### Start the project
 
-- Back-end: `php artisan serve`
-- Front-end: `yarn dev`
+- Back-end: `vendor/bin/sail up -d`
+- Front-end: `vendor/bin/sail yarn dev`
 
 ### Run tests
 
-- Back-end: `php artisan test`
-- Front-end: `yarn test`
+- Back-end: `vendor/bin/sail test`
+- Front-end: `vendor/bin/sail yarn test`
