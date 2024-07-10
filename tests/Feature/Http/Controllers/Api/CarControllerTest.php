@@ -16,8 +16,9 @@ class CarControllerTest extends TestCase
     {
         Car::factory(5)->create();
 
-        $response = $this->get('/api/cars');
-
-        $response->assertJsonCount(5, 'data');
+        $this
+            ->getJson('/api/cars')
+            ->assertOk()
+            ->assertJsonCount(5, 'data');
     }
 }
