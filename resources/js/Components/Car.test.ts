@@ -1,8 +1,7 @@
-import { mount } from "@vue/test-utils";
+import Car from './Car.vue';
+import { mount } from '@vue/test-utils';
 
-import Car from "./Car.vue";
-
-it("mounts", () => {
+it('mounts', () => {
     const wrapper = mount(Car, {
         props: {},
     });

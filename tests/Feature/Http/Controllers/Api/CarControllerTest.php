@@ -12,7 +12,7 @@ class CarControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testIndexReturnsCars(): void
+    public function test_index_returns_cars(): void
     {
         Car::factory(5)->create();
 
