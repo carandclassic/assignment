@@ -49,6 +49,7 @@ jobs:
           DB_CONNECTION: mysql
           DB_HOST: localhost
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
+          DB_DATABASE: carandclassic
           DB_USERNAME: root
           DB_PASSWORD: password
         run: php artisan test
