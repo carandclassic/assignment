@@ -1,3 +1,4 @@
+---
 name: 'Tests'
 
 on:
@@ -5,67 +6,49 @@ on:
     branches:
       - main
   pull_request:
-    branches:
-      - main
 
 jobs:
-  php:
-    name: 'Run PHP tests'
+  phpunit:
+    name: Run PHPUnit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: 'Set up PHP'
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
-
-      - name: 'Get Composer Cache Directory'
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: none
+      - name: Cache Composer dependencies
         id: composer-cache
         run: |
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
       - uses: actions/cache@v3
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
-
-      - name: 'Install Composer dependencies'
-        run: composer install --no-scripts
-
-      - name: 'Run tests'
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name: Run PHPUnit
         run: php artisan test
-  js:
-    name: 'Run JS tests'
+
+  vitest:
+    name: Run Vitest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          node-version: latest
-
-      - name: 'Get yarn cache directory path'
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: 'Install Yarn dependencies'
-        run: yarn install
-
-      - name: 'Build assets'
-        run: yarn build
-
-      - name: 'Run tests'
-        env:
-          LARAVEL_BYPASS_ENV_CHECK: '1'
-        run: yarn test --run
+          node-version: '22'
+          cache: 'npm'
+      - name: Install Node dependencies
+        run: npm ci
+      - name: Build Assets
+        run: npm run build
+      - name: Run Vitest
+        run: npm test --run
