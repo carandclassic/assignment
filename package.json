@@ -3,14 +3,27 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "test": "vitest",
+        "lint": "prettier --write . && vue-tsc"
     },
     "devDependencies": {
+        "@inertiajs/vue3": "^2.0.4",
         "@tailwindcss/vite": "^4.0.0",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "@vue/test-utils": "^2.4.6",
         "axios": "^1.7.4",
         "concurrently": "^9.0.1",
+        "happy-dom": "^17.2.2",
         "laravel-vite-plugin": "^1.2.0",
+        "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11",
         "tailwindcss": "^4.0.0",
-        "vite": "^6.0.11"
+        "typescript": "^5.8.2",
+        "vite": "^6.0.11",
+        "vitest": "^3.0.8",
+        "vue": "^3.5.13",
+        "vue-tsc": "^2.2.8"
     }
 }

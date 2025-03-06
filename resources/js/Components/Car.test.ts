@@ -1,13 +1,11 @@
-import {mount} from "@vue/test-utils";
-import {expect, test} from "vitest";
+import { mount } from "@vue/test-utils";
 
 import Car from "./Car.vue";
 
-test('it mounts', () => {
+it("mounts", () => {
     const wrapper = mount(Car, {
         props: {},
     });
 
     expect(wrapper.text()).toHaveLength(21);
-})
-
+});

@@ -69,4 +69,3 @@ jobs:
         env:
           LARAVEL_BYPASS_ENV_CHECK: "1"
         run: yarn test --run
-
