@@ -15,10 +15,8 @@ jobs:
       mysql:
         image: mysql:8
         env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: carandclassic_test
-          MYSQL_USER: carandclassic
-          MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: carandclassic
         ports:
           - 3306/tcp
     steps:
@@ -51,8 +49,7 @@ jobs:
           DB_CONNECTION: mysql
           DB_HOST: localhost
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
-          DB_DATABASE: carandclassic_test
-          DB_USERNAME: carandclassic
+          DB_USERNAME: root
           DB_PASSWORD: password
         run: php artisan test
 
