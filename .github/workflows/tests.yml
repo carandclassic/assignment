@@ -42,8 +42,10 @@ jobs:
             ${{ runner.os }}-composer-
       - name: Install Composer dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name:
       - name: Run PHPUnit
         env:
+          APP_KEY: base64:PU+C6CaFslHpj0EjQLXHmniwd8Ft1XtJeEWsSR5GgSw=
           DB_CONNECTION: mysql
           DB_HOST: localhost
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
