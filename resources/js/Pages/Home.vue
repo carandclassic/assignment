@@ -1,24 +1,22 @@
+<script setup lang="ts">
+import Cars from '@/components/Cars.vue';
+import Sort from '@/components/Sort.vue';
+import { Head } from '@inertiajs/vue3';
+</script>
+
 <template>
-    <header class="p-4 bg-[rgb(45,91,45)] text-white border-b-[6px] border-b-[rgb(255,209,3)]">
-        <span class="text-2xl">Car & Classic</span>
+    <Head title="Home" />
+
+    <header
+        class="bg-[rgb(45,91,45)] text-white border-b-[6px] border-b-[rgb(87,124,87)]"
+    >
+        <div class="p-4 max-w-screen-xl mx-auto">
+            <span class="text-2xl">Car & Classic</span>
+        </div>
     </header>
 
-    <main class="mx-auto max-w-screen-xl p-2">
-        <Sort class="mb-2"></Sort>
-        <Cars></Cars>
+    <main class="mx-auto max-w-screen-xl p-4">
+        <Sort class="mb-2" />
+        <Cars />
     </main>
 </template>
-
-<script>
-import {defineComponent} from "vue";
-
-import Sort from '../Components/Sort.vue';
-import Cars from '../Components/Cars.vue';
-
-export default defineComponent({
-    components: {
-        Sort,
-        Cars,
-    },
-});
-</script>

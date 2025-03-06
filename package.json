@@ -2,21 +2,36 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
         "build": "vite build",
-        "test": "vitest"
+        "dev": "vite",
+        "test": "vitest",
+        "lint": "prettier --write . && vue-tsc"
     },
     "devDependencies": {
-        "@vitejs/plugin-vue": "^4.2.3",
-        "@vue/test-utils": "^2.3.2",
-        "autoprefixer": "^10.4.14",
-        "axios": "^1.1.2",
-        "happy-dom": "^9.20.3",
-        "laravel-vite-plugin": "^0.7.5",
-        "postcss": "^8.4.23",
-        "tailwindcss": "^3.3.2",
-        "vite": "^4.0.0",
-        "vitest": "^0.31.1",
-        "vue": "^3.3.4"
+        "@inertiajs/vue3": "^2.0.4",
+        "@tailwindcss/vite": "^4.0.0",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "@vue/test-utils": "^2.4.6",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "happy-dom": "^17.2.2",
+        "laravel-vite-plugin": "^1.2.0",
+        "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11",
+        "tailwindcss": "^4.0.0",
+        "typescript": "^5.8.2",
+        "vite": "^6.0.11",
+        "vitest": "^3.0.8",
+        "vue": "^3.5.13",
+        "vue-tsc": "^2.2.8"
+    },
+    "prettier": {
+        "plugins": [
+            "prettier-plugin-tailwindcss",
+            "@trivago/prettier-plugin-sort-imports"
+        ],
+        "semi": true,
+        "singleQuote": true
     }
 }
