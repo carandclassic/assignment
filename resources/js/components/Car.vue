@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
     <div class="border">
         <div>Title</div>
@@ -6,11 +8,3 @@
         <div>Country</div>
     </div>
 </template>
-
-<script>
-import {defineComponent} from "vue";
-
-export default defineComponent({
-});
-</script>
-

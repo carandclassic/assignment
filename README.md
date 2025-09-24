@@ -6,13 +6,13 @@
 
 ### Package contains
 
-- Laravel 10
-- PHPUnit 10
+- Laravel 12
+- PHPUnit 12
 - Vue.js 3
-- TailwindCSS 3
+- TailwindCSS 4
 - Vite.js
 - Vitest
-- SQLite DB
+- MySQL 8
 
 ### Get familiar with code
 
@@ -27,14 +27,13 @@
 - Front-end test using `vitest` and `@vue/test-utils`: `resources/js/Components/Car.spec.js`
 - Back-end tests using `phpunit`: `tests/`
 
-## Set up environment
+## Set up the environment
 
 ### Prerequisites
 
-- PHP 8.1 or newer
+- PHP 8.4 or newer
 - Composer
-- Node.js 18
-- Yarn
+- Node.js 22
 
 ### Install dependencies and migrate database
 
@@ -47,10 +46,10 @@ docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v "$(pwd):/var/www/html" \
     -w /var/www/html \
-    laravelsail/php82-composer:latest \
+    laravelsail/php84-composer:latest \
     composer install --ignore-platform-reqs
 
-vendor/bin/sail yarn install
+vendor/bin/sail npm install
 vendor/bin/sail artisan migrate --force
 vendor/bin/sail artisan db:seed
 ```
@@ -58,9 +57,9 @@ vendor/bin/sail artisan db:seed
 ### Start the project
 
 - Back-end: `vendor/bin/sail up -d`
-- Front-end: `vendor/bin/sail yarn dev`
+- Front-end: `vendor/bin/sail npm run dev`
 
 ### Run tests
 
 - Back-end: `vendor/bin/sail test`
-- Front-end: `vendor/bin/sail yarn test`
+- Front-end: `vendor/bin/sail npm run test`

@@ -9,10 +9,9 @@ use Faker\Provider\Fakecar;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\File;
 
+/** @extends Factory<Car> */
 class CarFactory extends Factory
 {
-    protected $model = Car::class;
-
     public function definition(): array
     {
         $this->faker->addProvider(new Fakecar($this->faker));

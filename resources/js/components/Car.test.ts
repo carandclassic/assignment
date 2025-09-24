@@ -1,7 +1,7 @@
-import {mount} from "@vue/test-utils";
-import {expect, test} from "vitest";
+import { mount } from '@vue/test-utils';
+import { expect, test } from 'vitest';
 
-import Car from "./Car.vue";
+import Car from './Car.vue';
 
 test('it mounts', () => {
     const wrapper = mount(Car, {
@@ -9,5 +9,4 @@ test('it mounts', () => {
     });
 
     expect(wrapper.text()).toHaveLength(21);
-})
-
+});
