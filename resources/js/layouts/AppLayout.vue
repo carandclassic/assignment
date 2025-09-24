@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { home, profile } from '@/routes';
+import { index, profile } from '@/routes';
 import { Link } from '@inertiajs/vue3';
 
 const initials = 'BA';
@@ -8,7 +8,7 @@ const initials = 'BA';
 <template>
     <nav class="flex h-16 items-center justify-between border-b-[6px] bg-gradient-to-r from-[#1C371C] to-[#2D5A2E] px-4 text-white">
         <div>
-            <Link class="text-2xl font-bold" :href="home()">Car & Classic</Link>
+            <Link class="text-2xl font-bold" :href="index()">Car & Classic</Link>
         </div>
 
         <div>
