@@ -14,8 +14,7 @@ jobs:
   php:
     name: PHPUnit
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    permissions: read-all
     services:
       mysql:
         image: docker.io/mysql/mysql-server:8.0
