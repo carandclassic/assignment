@@ -14,22 +14,8 @@ jobs:
   php:
     name: PHPUnit
     runs-on: ubuntu-latest
-    permissions: read-all
-    services:
-      mysql:
-        image: docker.io/mysql/mysql-server:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: carandclassic
-          MYSQL_USER: carandclassic
-          MYSQL_PASSWORD: password
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping --silent"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -53,6 +39,12 @@ jobs:
         run: php artisan key:generate
 
       - name: Tests
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ':memory:'
+          CACHE_DRIVER: array
+          SESSION_DRIVER: array
+          QUEUE_CONNECTION: sync
         run: vendor/bin/phpunit
 
   js:
