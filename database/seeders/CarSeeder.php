@@ -21,6 +21,5 @@ class CarSeeder extends Seeder
         Car::query()->forceCreateQuietly(['make' => 'Lamborghini', 'model' => 'Espada', 'year' => 1971, 'price' => 89_140_00, 'country' => 'Italy', 'latitude' => '41.890209', 'longitude' => '12.492231', 'image_path' => '/images/lamborghini-espada.jpeg', 'created_at' => '2023-05-25 07:55:21']);
         Car::query()->forceCreateQuietly(['make' => 'Fiat', 'model' => '500', 'year' => 1971, 'price' => 17_00_00, 'country' => 'Italy', 'latitude' => '43.722954', 'longitude' => '10.396594', 'image_path' => '/images/fiat-500.jpeg', 'created_at' => '2023-05-18 22:04:55']);
         Car::query()->forceCreateQuietly(['make' => 'ASA', 'model' => '1000 GT Spider', 'year' => 1965, 'price' => 150_00_00, 'country' => 'Italy', 'latitude' => '45.4353', 'longitude' => '12.3265', 'image_path' => '/images/asa-1000-gt-spider.jpeg', 'created_at' => '2023-05-20 15:15:15']);
-
     }
 }
