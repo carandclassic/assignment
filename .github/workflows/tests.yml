@@ -18,7 +18,7 @@ jobs:
       contents: read
     services:
       mysql:
-        image: mysql:8.0
+        image: docker.io/mysql/mysql-server:8.0
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: carandclassic
