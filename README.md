@@ -44,9 +44,9 @@ cp .env.example .env
 
 docker run --rm \
     -u "$(id -u):$(id -g)" \
-    -v "$(pwd):/var/www/html" \
-    -w /var/www/html \
-    laravelsail/php84-composer:latest \
+    -v "$(pwd):/app" \
+    -w /app \
+    composer:latest \
     composer install --ignore-platform-reqs
 
 vendor/bin/sail npm install
