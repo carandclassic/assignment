@@ -49,7 +49,7 @@ docker run --rm \
     composer:latest \
     composer install --ignore-platform-reqs
 
-vendor/bin/sail npm install
+vendor/bin/sail pnpm install
 vendor/bin/sail artisan migrate --force
 vendor/bin/sail artisan db:seed
 ```
