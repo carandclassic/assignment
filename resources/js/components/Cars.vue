@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Car from './Car.vue';
+import Car from '@/components/Car.vue';
 
 const cars = [1, 2, 3, 4, 5, 6];
 </script>

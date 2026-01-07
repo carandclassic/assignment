@@ -9,6 +9,6 @@ defineOptions({
 </script>
 
 <template>
-    <Sort class="mb-2"></Sort>
-    <Cars></Cars>
+    <Sort class="mb-2" />
+    <Cars />
 </template>
