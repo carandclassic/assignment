@@ -4,7 +4,7 @@
     <div>
         <select>
             <option>Latest</option>
-            <option>Country</option>
+            <option>Near me</option>
         </select>
     </div>
 </template>
