@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Database\Factories;
 
 use App\Models\Car;
-use Faker\Provider\Fakecar;
+use Faker\Provider\FakeCar;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\File;
 
@@ -14,7 +14,7 @@ class CarFactory extends Factory
 {
     public function definition(): array
     {
-        $this->faker->addProvider(new Fakecar($this->faker));
+        $this->faker->addProvider(new FakeCar($this->faker));
 
         return [
             'make' => $this->faker->vehicleBrand(),
